@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global text color overrides for light and dark themes */
+:root {
+  color-scheme: light;
+  color: #000000;
+}
+
+.dark {
+  color-scheme: dark;
+  color: #ffffff;
+}
+
+/* Dark theme - make all text white */
+.dark .text-gray-300,
+.dark .text-gray-200,
+.dark .text-gray-100,
+.dark .text-gray-400,
+.dark .text-gray-500,
+.dark .text-gray-600,
+.dark .text-gray-700,
+.dark .text-gray-800,
+.dark .text-gray-900,
+.dark .text-black {
+  color: #ffffff !important;
+}
+
+/* Light theme - make all text black */
+.text-gray-100,
+.text-gray-200,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-gray-600,
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
+  color: #000000 !important;
+}
+
+/* Fix contrast for links - keep colored to distinguish them */
+.text-primary-600 {
+  color: #1e40af !important;
+}
+
+.dark .text-primary-400,
+.dark .text-primary-500,
+.dark .text-primary-600 {
+  color: #60a5fa !important;
+}
+
+/* Navigation active state */
+.bg-primary-50 {
+  background-color: #eff6ff !important;
+}
+
+.dark .bg-primary-900\/30 {
+  background-color: rgba(30, 58, 138, 0.3) !important;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
